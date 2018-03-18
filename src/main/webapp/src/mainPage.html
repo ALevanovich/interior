@@ -1,0 +1,90 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill slide1"></div>
+            <div class="carousel-caption">
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill slide2"></div>
+            <div class="carousel-caption">
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill slide3"></div>
+            <div class="carousel-caption">
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-main-container">
+    <div class="container">
+        <div class="row">
+            <div id="mygallery">
+                <div class="sale-item">
+                    <img alt="" src="img/sales/12377750.jpg"/>
+                    <div class="caption"></div>
+                    <p class="btn btn-primary" data-toggle="modal" data-target="#productInfoModal" ng-click="openProductInfo('12377750')">Подробнее...</p>
+                </div>
+                <div class="sale-item">
+                    <div class="sale-item-ribbon">Скидка 25%</div>
+                    <img alt="" src="img/sales/12377751.jpg"/>
+                    <div class="caption"></div>
+                    <p class="btn btn-primary" data-toggle="modal" data-target="#productInfoModal" ng-click="openProductInfo('12377751')">Подробнее...</p>
+                </div>
+                <div class="sale-item">
+                    <div class="sale-item-ribbon">Скидка 15%</div>
+                    <img alt="" src="img/sales/12377752.jpg"/>
+                    <div class="caption"></div>
+                    <p class="btn btn-primary" data-toggle="modal" data-target="#productInfoModal" ng-click="openProductInfo('12377752')">Подробнее...</p>
+                </div>
+                <div class="sale-item">
+                    <div class="sale-item-ribbon">Скидка 10%</div>
+                    <img alt="" src="img/sales/12377754.jpg"/>
+                    <div class="caption"></div>
+                    <p class="btn btn-primary" data-toggle="modal" data-target="#productInfoModal" ng-click="openProductInfo('12377754')">Подробнее...</p>
+                </div>
+                <div class="sale-item">
+                    <div class="sale-item-ribbon">Скидка 30%</div>
+                    <img alt="" src="img/sales/12377756.jpg"/>
+                    <div class="caption"></div>
+                    <p class="btn btn-primary" data-toggle="modal" data-target="#productInfoModal" ng-click="openProductInfo('12377756')">Подробнее...</p>
+                </div>
+                <div class="sale-item">
+                    <div class="sale-item-ribbon">Скидка 10%</div>
+                    <img alt="" src="img/sales/12377757.jpg"/>
+                    <div class="caption"></div>
+                    <p class="btn btn-primary" data-toggle="modal" data-target="#productInfoModal" ng-click="openProductInfo('12377757')">Подробнее...</p>
+                </div>
+                <div class="sale-item">
+                    <div class="sale-item-ribbon">Скидка 30%</div>
+                    <img alt="" src="img/sales/12377758.jpg"/>
+                    <div class="caption"></div>
+                    <p class="btn btn-primary" data-toggle="modal" data-target="#productInfoModal" ng-click="openProductInfo('12377758')">Подробнее...</p>
+                </div>
+                <div class="sale-item">
+                    <div class="sale-item-ribbon">Скидка 30%</div>
+                    <img alt="" src="img/sales/12377759.jpg"/>
+                    <div class="caption"></div>
+                    <p class="btn btn-primary" data-toggle="modal" data-target="#productInfoModal" ng-click="openProductInfo('12377759')">Подробнее...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#myCarousel').carousel({
+        interval: 5000,
+        pause: "false"
+    });
+    $("#mygallery").justifiedGallery({
+        rowHeight: 250,
+        margins: 15
+    });
+</script>
