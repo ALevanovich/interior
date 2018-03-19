@@ -1,0 +1,51 @@
+<div class="page-container adding-product-page">
+    <div class="container">
+        <form id="adding-product-form" ng-submit="addNewProduct(newProduct)">
+            <div class="row clearfix">
+                <h2>Добавить новый продукт</h2>
+                <div class="col-sm-12">
+                    <div class="input-group">
+                        <label>Название товара:</label>
+                        <input type="text" name="name" ng-model="newProduct.name" required/>
+                    </div>
+                    <div class="input-group">
+                        <label>Описание товара:</label>
+                        <input type="text" name="description" ng-model="newProduct.description" required />
+                    </div>
+                    <div class="input-group">
+                        <label>Категория:</label>
+                        <select name="tag" ng-model="newProduct.tag" required>
+                            <option value="bathroom">Ванная</option>
+                            <option nvalue="kitchen">Кухня</option>
+                            <option value="bedroom">Спальня</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Картинка:</label>
+                        <input type="text" name="img" ng-model="newProduct.img" required />
+                    </div>
+                    <div class="input-group">
+                        <label>Цена:</label>
+                        <input type="text" name="oldPrice" ng-model="newProduct.oldPrice" required />
+                    </div>
+                    <div class="input-group checkbox-container">
+                        <label>Товар со скидкой?</label>
+                        <input type="checkbox" name="isSale" ng-model="newProduct.isSale"/>
+                    </div>
+                    <div class="input-group" ng-if="newProduct.isSale">
+                        <label>Цена со скидкой:</label>
+                        <input type="text" name="currentPrice" ng-model="newProduct.currentPrice" ng-blur="getSale()" required/>
+                    </div>
+                    <div class="input-group" ng-if="newProduct.isSale">
+                        <label>Скидка:</label>
+                        <input type="text" name="sale" ng-model="newProduct.sale" disabled/>
+                    </div>
+                </div>
+            </div>
+            <div class="button-group">
+                <p class="message">{{message}}</p>
+                <button class="btn btn-primary" name="submit" type="submit">Добавить</button>
+            </div>
+        </form>
+    </div>
+</div>

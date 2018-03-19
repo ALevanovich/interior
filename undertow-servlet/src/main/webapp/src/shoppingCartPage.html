@@ -1,0 +1,83 @@
+<div class="page-container shopping-cart-page">
+    <div class="container" ng-if="cartItems.length">
+        <div class="row clearfix">
+            <div class="col-sm-12">
+                <table class="shopping-cart-table">
+                    <tr>
+                        <th>№</th>
+                        <th class="text-left">Товар</th>
+                        <th>Количество</th>
+                        <th>Сумма</th>
+                        <th></th>
+                    </tr>
+                    <tr ng-repeat="item in cartItems">
+                        <td class="shopping-cart-number">{{$index + 1}}</td>
+                        <td class="shopping-cart-goods">
+                            <div class="row clearfix">
+                                <div class="col-sm-3">
+                                    <img alt="" ng-src="{{item.img}}"/>
+                                </div>
+                                <div class="col-sm-9">
+                                    <p class="shopping-cart-name">{{item.name}}</p>
+                                    <p class="shopping-cart-price">{{item.currentPrice}} BYN</p>
+                                    <p class="shopping-cart-description">{{item.description}} BYN</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="shopping-cart-quantity">
+                            <input type="text" name="quantity" ng-model="item.quantity" ng-blur="changeTotalCurrentPrice(item, $index)"/>
+                        </td>
+                        <td class="shopping-cart-price">{{item.totalCurrentPrice}} BYN</td>
+                        <td class="shopping-cart-remove">
+                            <p ng-click="removeCartItem($index)">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <div class="shopping-cart-total clearfix">
+                    <div class="shopping-cart-total-price">Всего: {{totalPrice}} BYN</div>
+                </div>
+                <div class="shopping-cart-total clearfix">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="input-group">
+                            <label>Ваше имя:</label>
+                            <input type="text" name="name" ng-model="info.name" required/>
+                        </div>
+                        <div class="input-group">
+                            <label>Номер телефона:</label>
+                            <input type="tel" name="phone" ng-model="info.phone" required />
+                        </div>
+                        <div class="input-group">
+                            <label>Email:</label>
+                            <input type="email" name="email" ng-model="info.email" required />
+                        </div>
+                        <div class="input-group">
+                            <label>Адрес:</label>
+                            <input type="text" name="address" ng-model="info.address" required />
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="input-group radio-container">
+                            <label>Выберети способ оплаты:</label>
+                            <input type="radio" name="pay" ng-model="info.pay" value="Наличными" required/><span>Наличными</span>
+                            <input type="radio" name="pay" ng-model="info.pay" value="Кредитной карточкой VISA/MasterCard" required /><span>Кредитной карточкой VISA/MasterCard</span>
+                        </div>
+                        <div class="input-group">
+                            <label>Пожелания при заказе:</label>
+                            <textarea name="message" ng-model="info.message"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping-cart-total clearfix">
+                    <div class="button-group">
+                        <button class="btn btn-primary" id="submit" name="submit" type="submit" ng-click="orderBy(info)">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" ng-if="!cartItems.length">
+        <div class="shopping-cart-empty">Корзина пуста.</div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="page-container contact-page">
+    <div class="container">
+        <div class="row clearfix">
+            <h2>Свяжитесь с нами, мы обязательно ответим</h2>
+            <h2>-</h2>
+            <h3>Пожалуйста, отправьте нам любой вопрос, пожелание или предложение, заполнив эту форму</h3>
+            <div class="col-xs-12">
+                <form id="contact-form" method="post" action="/contacts">
+                    <div class="input-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" name="name" id="name" required/>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Номер телефона:</label>
+                        <input type="tel" name="phone" id="phone" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Сообщение:</label>
+                        <textarea maxlength="35" name="message" id="message" required></textarea>
+                    </div>
+                    <div class="buttons-group text-center">
+                        <button class="btn btn-primary" id="submit" name="submit" type="submit">Отправить</button>
+                        <button class="btn btn-default" type="reset">Очистить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
