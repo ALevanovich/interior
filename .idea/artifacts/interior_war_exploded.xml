@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="interior:war exploded">
+    <output-path>$PROJECT_DIR$/target/interior-1.0</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="interior" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:9.2-1003-jdbc4" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.25" />
+          <element id="library" level="project" name="Maven: javax.mail:mail:1.4.7" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.7" />
+          <element id="library" level="project" name="Maven: org.json:json:20160212" />
+          <element id="library" level="project" name="Maven: javax.ws.rs:jsr311-api:1.1.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/interior-1.0/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="interior/web/Web" />
+    </root>
+  </artifact>
+</component>
