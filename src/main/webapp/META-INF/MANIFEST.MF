@@ -1,2 +1,2 @@
-Custom-Attribute: Custom attribute
-Custom-Attribute-2: Another custom attribute
+Manifest-Version: 1.0
+Main-Class: TestClass
