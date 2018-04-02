@@ -35,21 +35,18 @@
 			</plugin>
 
 			<plugin>
+				<!-- Build an executable JAR -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
 				<configuration>
 					<archive>
-						<manifestFile>src/main/webapp/META-INF/MANIFEST.MF</manifestFile>
 						<manifest>
 							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>com.akarpovich.interior.utils.ConversionUtils</mainClass>
 						</manifest>
-						<manifestEntries>
-							<Build-By>itcuties</Build-By>
-						</manifestEntries>
 					</archive>
-					<!--<source>1.8</source>-->
-					<!--<target>1.8</target>-->
-					<!--<encoding>UTF-8</encoding>-->
 				</configuration>
 			</plugin>
 
