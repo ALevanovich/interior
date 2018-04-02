@@ -1,1 +1,1 @@
-web: java -jar target/interior-1.0.jar
+web: java -Dserver.port=$PORT -jar target\interior-1.0.jar
